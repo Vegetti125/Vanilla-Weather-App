@@ -45,6 +45,7 @@ fahrenheitTemperature = response.data.main.temp;
     )
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
+
 function search(city) {
 let apiKey = "cd173a006b0e51dac58c6d8064c94178";
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
@@ -75,7 +76,7 @@ function displayFahrenheitTemperature(event) {
     temperatureElement.innerHTML = Math.round (fahrenheitTemperature);
 }
 
-search("Paris");
+search("Chicago");
 
 let fahrenheitTemperature = null;
 
