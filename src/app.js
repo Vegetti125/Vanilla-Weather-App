@@ -43,9 +43,20 @@ let iconElement = document.querySelector ("#icon");
     )
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
-
+function search(city) {
 let apiKey = "cd173a006b0e51dac58c6d8064c94178";
-let city = "Elgin"
 let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-
 axios.get(apiUrl).then(displayTemperature);
+}
+
+function handleSubmit(event) {
+    event.preventDefault();
+    let cityInputElement = document.querySelector("#city-input");
+    search(cityInputElement.value);
+}
+
+
+search("Paris");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
