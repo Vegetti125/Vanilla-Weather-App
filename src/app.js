@@ -22,7 +22,6 @@ function formatDate(timestamp) {
 }
 
 function displayTemperature(response) {
-    console.log(response.data);
     let temperatureElement = document.querySelector("#temperature");
         let cityElement = document.querySelector("#city");
         let descriptionElement = document.querySelector("#description");
@@ -40,6 +39,7 @@ let dateElement = document.querySelector("#date");
 }
 
 let apiKey = "cd173a006b0e51dac58c6d8064c94178";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=Elgin&appid=${apiKey}&units=metric`;
+let city = "Elgin"
+let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
