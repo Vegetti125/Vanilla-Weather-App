@@ -10,20 +10,19 @@
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
     crossorigin="anonymous">
      <link rel="stylesheet" href="src/style.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <div class="container">
         <div class="weather-app-wrapper">
         <div class="weather-app">
             <div class="overview">
-<h1>
-    New York
-</h1>
+<h1 id="city"></h1>
 <ul>
     <li>
         Friday 05:00
     </li>
-    <li>
+    <li id="description">
         Clear
     </li>
 </ul>
@@ -34,21 +33,18 @@
         <img src="https://ssl.gstatic.com/onebox/weather/64/sunny.png" alt="Clear"
    id="icon" />
   <div>
-    <strong id="temperature"> 77</strong
+    <strong id="temperature"> </strong
     ><span class="units">°F  | °C</span>
   </div>
 </div>
     </div>
     <div class="col-6">
         <ul>
-            <li>
-                Precipitation: 0%
+            <li> Humidity: <span id="humidity"></span>
+                    %
             </li>
             <li>
-                Humidity: 73%
-            </li>
-            <li>
-                Wind: 2 km/h
+                Wind: <span id="wind"></span> km/h
             </li>
         </ul>
     </div>
