@@ -32,7 +32,7 @@ forecastHTML +
         <div class="col-2">
             <div class="weather-forecast-date">${day}</div>
             <img
-            src="http://openweathermap.org/img/wn/50d@2x.png"
+            src="https://openweathermap.org/img/wn/50d@2x.png"
             alt=""
             width="42"
             /> 
@@ -74,7 +74,7 @@ fahrenheitTemperature = response.data.main.temp;
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
      iconElement.setAttribute(
         "src",
-    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
     )
     iconElement.setAttribute("alt", response.data.weather[0].description);
 }
