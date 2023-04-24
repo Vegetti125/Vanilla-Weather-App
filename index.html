@@ -13,6 +13,10 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <video autoplay muted loop id="bg-video">
+<source src="img/background.mp4" type="video/mp4">
+</video>
+    
     <div class="container">
         <div class="weather-app-wrapper">
         <div class="weather-app">
@@ -36,7 +40,9 @@
                 </div>
             </form>
             <div class="overview">
-<h1 id="city"></h1>
+
+    <h1 id="city"></h1>
+    
 <ul>
     <li> Last Updated: <span id="date"></span></li>
     <li id="description">
@@ -66,9 +72,10 @@
             <li>
                 Wind: <span id="wind"></span> km/h
             </li>
+
         </ul>
     </div>
-<div class="weather-forcast" id="forecast">
+<div class="weather-forecast" id="forecast">
     <div class="row">
         <div class="col-2">
             <div class="weather-forecast-date">

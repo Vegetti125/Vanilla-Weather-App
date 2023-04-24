@@ -85,6 +85,7 @@ function displayTemperature(response) {
         let descriptionElement = document.querySelector("#description");
     let humidityElement = document.querySelector("#humidity");
         let windElement = document.querySelector("#wind");
+
 let dateElement = document.querySelector ("#date");
 let iconElement = document.querySelector ("#icon");
 
@@ -96,6 +97,8 @@ fahrenheitTemperature = response.data.main.temp;
     descriptionElement.innerHTML = response.data.weather[0].description;
     humidityElement.innerHTML = response.data.main.humidity;
     windElement.innerHTML = Math.round (response.data.wind.speed);
+
+
     dateElement.innerHTML = formatDate(response.data.dt * 1000);
      iconElement.setAttribute(
         "src",
@@ -123,7 +126,6 @@ function handleSubmit(event) {
 function displayCelsiusTemperature(event) {
     event.preventDefault();
     let temperatureElement = document.querySelector("#temperature");
-    // remove the active class the fahrenheit link
     fahrenheitLink.classList.remove("active");
     celsiusLink.classList.add("active");
     let celsiusTemperature = (fahrenheitTemperature - 32) * 5 / 9;
